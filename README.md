@@ -88,4 +88,4 @@ Terraform apply
 
 ## Accès Projet
 
-Le projet est disponible depuis le repository suivant : [GitHub](https://github.com/DanielOliver34/Terraform_AWS.git) 
+Le projet est disponible depuis le repository suivant : [GitHub](https://github.com/DanielOliver34/Eval-AWS) 
