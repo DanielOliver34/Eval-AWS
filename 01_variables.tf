@@ -6,12 +6,12 @@ variable "region" {
 variable "access_key" {
   description = "La clé d'accès AWS"
   type        = string
-  default     = "AKIA5ZY7AAPSGM4ZYNGZ"
+  default     = "xxxxxxxxx"
 }
 variable "secret_key" {
   description = "La clé secrète AWS"
   type        = string
-  default     = "W+MRCWiyZVPfaINaSQmojxNYB3e7ExbomwlWwiWJ"
+  default     = "xxxxxxxxxx"
 }
 variable "instance_type" {
   type = string
