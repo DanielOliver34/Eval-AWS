@@ -82,7 +82,7 @@ Terraform plan
 Terraform apply
 
 # 4. Décommissionnement de toute l'infrastructure
-Terraform apply
+Terraform destroy
 
 ```
 
