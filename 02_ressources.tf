@@ -1,3 +1,4 @@
+#Déclaration d'une instance EC2 AWS en l'associant au subnet et au security group
 resource "aws_instance" "server" {
   instance_type = var.instance_type
   ami = var.ami
@@ -7,6 +8,8 @@ resource "aws_instance" "server" {
     Name = "TP eval AWS"
   }
 }
+
+#Déclaration d'un VPC AWS en utilisant la variable pour le bloc CIDR du VPC
 resource "aws_vpc" "evalvpc" {
   cidr_block       = var.vpc_cidr_block
   instance_tenancy = "default"
@@ -16,6 +19,7 @@ resource "aws_vpc" "evalvpc" {
   }
 }
 
+#Déclaration d'un sous-réseau AWS
 resource "aws_subnet" "evaltpsubnet" {
   vpc_id            = aws_vpc.evalvpc.id
   cidr_block        = "10.0.2.0/24"
@@ -26,6 +30,7 @@ resource "aws_subnet" "evaltpsubnet" {
   }
 }
 
+#Déclaration d'un groupe de sécurité AWS pour autoriser le traffic TLS entrant et sortant depuis n'importe qu'elle adresse IP
 resource "aws_security_group" "autoriser_tls" {
   name        = "allow_tls"
   description = "Allow TLS inbound traffic"
@@ -49,6 +54,7 @@ resource "aws_security_group" "autoriser_tls" {
   }
 }
 
+#Déclaration d'un bucket AWS S3
 resource "aws_s3_bucket" "s3" {
   bucket = var.bucket
 }
