@@ -1,3 +1,4 @@
+#Déclaration de la version de Terraform et des configurations globales
 terraform {
   required_providers {
     aws = {
@@ -7,6 +8,7 @@ terraform {
   }
 }
 
+#Configuration du fournisseur AWS
 provider "aws" {
   region     = var.region
   access_key = var.access_key 
